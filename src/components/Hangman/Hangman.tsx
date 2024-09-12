@@ -2,14 +2,14 @@
 import { useEffect, useState } from "react";
 
 
-import Level1 from '../../assets/Images/1.svg';
-import Level2 from '../../assets/Images/2.svg';
-import Level3 from '../../assets/Images/3.svg';
-import Level4 from '../../assets/Images/4.svg';
-import Level5 from '../../assets/Images/5.svg';
-import Level6 from '../../assets/Images/6.svg';
-import Level7 from '../../assets/Images/7.svg';
-import Level8 from '../../assets/Images/8.svg';
+import Level1 from '../../assets/images/1.svg';
+import Level2 from '../../assets/images/2.svg';
+import Level3 from '../../assets/images/3.svg';
+import Level4 from '../../assets/images/4.svg';
+import Level5 from '../../assets/images/5.svg';
+import Level6 from '../../assets/images/6.svg';
+import Level7 from '../../assets/images/7.svg';
+import Level8 from '../../assets/images/8.svg';
 
 import GameStatusPopupModel from "../Popup/GameStatusPopupModel";
 
