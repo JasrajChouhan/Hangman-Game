@@ -4,7 +4,6 @@
 
 import { createBrowserRouter } from 'react-router-dom';
 
-import App from '../App';
 import PlayGameContainer from '../components/PlayGame/PlayGameContainer';
 import StartGame from '../components/StartGame/StartGame';
 import HomeContainer from '../pages/Home/HomeContainer';
