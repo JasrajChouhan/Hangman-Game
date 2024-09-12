@@ -12,7 +12,7 @@ export default function GameStatusPopupModel(props : GamePopupModelProp) {
     } 
 
     function handleWindowRefreshWhenUserIsWin(){
-        navigate('/start')
+        navigate('/')
     }
 
     return (

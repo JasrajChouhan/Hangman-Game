@@ -17,7 +17,7 @@ function PlayGameContainer() {
 
 
     function hanldeLetterClick(letter: string) {
-        if (!state.selectedWord.toUpperCase().includes(letter)) {
+        if (!state.selectedWord?.toUpperCase().includes(letter)) {
             // alert("You choose wrong")
 
             toast.error("Please select correct letter", {
@@ -31,13 +31,14 @@ function PlayGameContainer() {
         SetGuessedLettersArr([...guessedLettersArr, letter]);
     }
     console.log(state)
-    console.log(state.selectedWord)
+    console.log(state?.selectedWord)
     return (
         <PlayGame
-            selectedWord={state.selectedWord}
+            selectedWord={state?.selectedWord}
             guessedLettersArr={guessedLettersArr}
             step={step}
             hanldeLetterClick={hanldeLetterClick}
+            hint = {state.hint}
         />
     )
 }

@@ -13,6 +13,7 @@ interface PlayGameProps {
   selectedWord: string;
   guessedLettersArr: string[];
   step: number;
+  hint : string ;
   hanldeLetterClick: (letter: string) => void;
 }
 
@@ -22,11 +23,14 @@ function PlayGame(props: PlayGameProps) {
     guessedLettersArr,
     step,
     hanldeLetterClick,
+    hint
   } = props;
 
   return (
+    <>
+      <h1 className="text-center text-6xl font-bold mt-10 ">{hint}</h1>
     <div className="flex flex-col md:flex-row justify-center items-center w-full h-screen p-4">
-
+        
       <div className="w-full md:w-1/2 flex flex-col items-center mb-8 md:mb-0">
         {/* --- Masked Word--- */}
         <div className="mb-6">
@@ -58,6 +62,7 @@ function PlayGame(props: PlayGameProps) {
 
       
     </div>
+    </>
   );
 }
 

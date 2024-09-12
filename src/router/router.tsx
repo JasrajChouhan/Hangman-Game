@@ -2,28 +2,29 @@
   * keep all the route of app
 */}
 
-import {createBrowserRouter} from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom';
 
-import StartGame from '../components/StartGame/StartGame';
-import PlayGameContainer from '../components/PlayGame/PlayGameContainer';
 import App from '../App';
+import PlayGameContainer from '../components/PlayGame/PlayGameContainer';
+import StartGame from '../components/StartGame/StartGame';
+import HomeContainer from '../pages/Home/HomeContainer';
 
 const router = createBrowserRouter([
     {
-        path : '/',
-        element : <App/>,
-        errorElement : <div>Error 404...</div>
+        path: '/',
+        element: <HomeContainer />,
+        errorElement: <div>Error 404...</div>
     },
 
     {
-        path : '/start',
-        element : <StartGame />
+        path: '/start',
+        element: <StartGame />
 
     },
     {
-        path : '/play',
-        element : <PlayGameContainer/>
-    }
+        path: '/play',
+        element: <PlayGameContainer />
+    },
 ])
 
-export default router ;
+export default router;
