@@ -1,0 +1,6 @@
+node_modules
+.prettierrc
+
+node_modules/
+dist/
+.vite/
