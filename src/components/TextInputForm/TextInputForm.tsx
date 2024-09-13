@@ -25,7 +25,7 @@ function TextInputForm({
                 inputType={inputType}
                 placeholder="Enter word"
                 handleChange={handleInputChange}
-                className="border-blue-400 hover:border-blue-500 transition duration-200 ease-in-out w-full h-10 my-2 px-2"
+                className="border border-blue-400 hover:border-blue-500 transition duration-200 ease-in-out w-full h-10 my-2 px-2"
             />
             <div className="flex space-x-3" >
                 <Button

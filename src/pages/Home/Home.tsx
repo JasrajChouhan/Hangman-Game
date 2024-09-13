@@ -16,7 +16,7 @@ function Home(props: HomeProps) {
     return (
         <div className="relative h-screen bg-cover bg-center bg-[url('./assets/images/backgroundImage.jpg')]">
             <div className="absolute inset-0 bg-black opacity-60"></div>
-            <div className="relative flex flex-col justify-center items-center h-full text-[#FF4500 ] text-center p-6">
+            <div className="relative flex flex-col justify-center items-center h-full text-white text-center p-6">
                 <h1 className="text-5xl md:text-7xl font-bold mb-4 animate__animated animate__fadeIn animate__delay-1s">
                     Welcome to Hangman
                 </h1>
