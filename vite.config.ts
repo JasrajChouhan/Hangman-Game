@@ -9,7 +9,7 @@ export default defineConfig({
       '/api': {
         target: 'https://hangman-backend-9q68.onrender.com',
         changeOrigin: true,
-        rewrite: (path: string) => path.replace(/^\/api/, ''),
+        rewrite: (path: string) => path.replace(/^\/api/, '/api'),
       },
     },
   },
