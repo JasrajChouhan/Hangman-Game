@@ -24,6 +24,7 @@ function HomeContainer() {
             toast.error("Something went wrong happend", {
                 position: 'top-right'
             })
+            console.log(error)
         }
 
     }
