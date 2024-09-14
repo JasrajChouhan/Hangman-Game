@@ -7,16 +7,12 @@ function HomeContainer() {
     const [word, setWord] = useState<string | null | undefined>()
     const [hint, setHint] = useState<string | null | undefined>()
 
-    let API_URI : string ;
-    if(configObj.NODE_ENV === 'production') {
-        API_URI = configObj.API_URL;
-    }else {
-        API_URI = "/api"
-    }
-    console.log(API_URI , configObj.NODE_ENV)
+    
+    const API_URI = configObj.API_URL;
+    
     async function fetwetchWord() {
         try {
-            const response = await fetch("https://hangman-backend-9q68.onrender.com/")
+            const response = await fetch(API_URI)
             const data = await response.json();
 
             const { words } = data;
