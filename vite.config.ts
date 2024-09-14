@@ -7,9 +7,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://hangman-backend-9q68.onrender.com',
+        target: 'https://hangman-backend-9q68.onrender.com/',
         changeOrigin: true,
-        rewrite: (path: string) => path.replace(/^\/api/, '/api'),
+        rewrite: (path: string) => path.replace(/^\/api/ , ''),
       },
     },
   },
