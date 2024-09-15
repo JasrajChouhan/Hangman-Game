@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
-import HashLoader from 'react-spinners'
 import HashLoaderComp from "../../components/Loader/HashLoderComp";
 
 
 interface HomeProps {
     hint: string | null | undefined;
     word: string | null | undefined;
-    loadingStatus : boolean;
-    errorStatus : boolean;
+    loadingStatus: boolean;
+    errorStatus: boolean;
 }
 
 function Home(props: HomeProps) {
@@ -15,10 +14,9 @@ function Home(props: HomeProps) {
         hint,
         word,
         loadingStatus,
-        errorStatus
     } = props
 
-    if(loadingStatus) {
+    if (loadingStatus) {
         return <div className="h-screen flex justify-center items-center" >
             <HashLoaderComp />
         </div>
@@ -35,19 +33,19 @@ function Home(props: HomeProps) {
                 </p>
 
                 <div className="flex gap-4" >
-                <Link to={"/play"} state={{
-                    selectedWord: word,
-                    hint: hint
-                }} className="bg-green-600 hover:bg-green-800 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s">
-                    Single Player
-                </Link>
+                    <Link to={"/play"} state={{
+                        selectedWord: word,
+                        hint: hint
+                    }} className="bg-green-600 hover:bg-green-800 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s">
+                        Single Player
+                    </Link>
 
-                <Link to={"/start"} state={{
-                    selectedWord: word,
-                    hint: hint
-                }} className="bg-gray-600 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s">
-                    Multiplyer Game
-                </Link>
+                    <Link to={"/start"} state={{
+                        selectedWord: word,
+                        hint: hint
+                    }} className="bg-gray-600 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s">
+                        Multiplyer Game
+                    </Link>
 
                 </div>
                 <p className="mt-4 text-sm animate__animated animate__fadeIn animate__delay-4s">
