@@ -1,18 +1,28 @@
 import { Link } from "react-router-dom";
+import HashLoader from 'react-spinners'
+import HashLoaderComp from "../../components/Loader/HashLoderComp";
 
 
 interface HomeProps {
     hint: string | null | undefined;
     word: string | null | undefined;
+    loadingStatus : boolean;
+    errorStatus : boolean;
 }
 
 function Home(props: HomeProps) {
     const {
         hint,
-        word
+        word,
+        loadingStatus,
+        errorStatus
     } = props
 
-
+    if(loadingStatus) {
+        return <div className="h-screen flex justify-center items-center" >
+            <HashLoaderComp />
+        </div>
+    }
     return (
         <div className="relative h-screen bg-cover bg-center bg-[url('./assets/images/backgroundImage.jpg')]">
             <div className="absolute inset-0 bg-black opacity-60"></div>

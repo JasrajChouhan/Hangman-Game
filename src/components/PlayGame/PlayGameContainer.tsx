@@ -7,6 +7,7 @@ import { useState } from "react";
 import toast from 'react-hot-toast';
 import { useLocation } from "react-router-dom";
 
+import HashLoaderComp from "../Loader/HashLoderComp";
 import PlayGame from "./PlayGame";
 
 
@@ -30,15 +31,23 @@ function PlayGameContainer() {
 
         SetGuessedLettersArr([...guessedLettersArr, letter]);
     }
-    console.log(state)
-    console.log(state?.selectedWord)
+
+
+    if (state.hint === null || state.hint === undefined) {
+        return <div className="h-screen flex justify-center items-center" >
+            <HashLoaderComp size={150} />
+            </div> 
+
+
+    }
     return (
+
         <PlayGame
             selectedWord={state?.selectedWord}
             guessedLettersArr={guessedLettersArr}
             step={step}
             hanldeLetterClick={hanldeLetterClick}
-            hint = {state.hint}
+            hint={state.hint}
         />
     )
 }
