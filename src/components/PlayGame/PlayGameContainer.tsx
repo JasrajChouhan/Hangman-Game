@@ -32,8 +32,7 @@ function PlayGameContainer() {
         SetGuessedLettersArr([...guessedLettersArr, letter]);
     }
 
-
-    if (state.hint === null || state.hint === undefined) {
+    if (state.selectedWord === null || state.selectedWord === undefined) {
         return <div className="h-screen flex justify-center items-center" >
             <HashLoaderComp size={150} />
             </div> 
