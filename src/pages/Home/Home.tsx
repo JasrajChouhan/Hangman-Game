@@ -49,7 +49,7 @@ function Home(props: HomeProps) {
 
                 </div>
                 <p className="mt-4 text-sm animate__animated animate__fadeIn animate__delay-4s">
-                    © 2024 Your Game Name. All rights reserved.
+                    © 2024 Hangman. All rights reserved.
                 </p>
             </div>
         </div>
